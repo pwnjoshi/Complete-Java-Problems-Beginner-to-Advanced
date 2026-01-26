@@ -10,7 +10,7 @@
 **A comprehensive, daily-updated repository of Java programming exercises**  
 *From fundamental concepts to advanced implementations*
 
-[**🌐 Live Demo**](https://pwnjoshi.github.io/Complete-Java-Problems-Beginner-to-Advanced-/) • [**📖 View Code**](https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-)
+[**🌐 Live Demo**](http://iampawan.me/Complete-Java-Problems-Beginner-to-Advanced/) • [**📖 View Code**](https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced)
 
 ---
 
@@ -53,7 +53,7 @@ Ensure you have the following installed:
 
 Simply visit the live demo to browse, search, and copy code:
 
-**[Open Interactive Viewer →](https://pwnjoshi.github.io/Complete-Java-Problems-Beginner-to-Advanced-/)**
+**[Open Interactive Viewer →](http://iampawan.me/Complete-Java-Problems-Beginner-to-Advanced/)**
 
 Features:
 - 🔍 Search programs by keyword
@@ -65,8 +65,8 @@ Features:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-.git
-   cd Complete-Java-Problems-Beginner-to-Advanced-
+   git clone https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced.git
+   cd Complete-Java-Problems-Beginner-to-Advanced
    ```
 
 2. **Compile and run individual programs**
@@ -145,7 +145,7 @@ Host your own version:
 2. Navigate to **Settings** → **Pages**
 3. Select **main** branch as source
 4. Your site will be live at:  
-   `https://pwnjoshi.github.io/Complete-Java-Problems-Beginner-to-Advanced-/`
+   `https://yourusername.github.io/Complete-Java-Problems-Beginner-to-Advanced-/`
 
 ## 🤝 Contributing
 
