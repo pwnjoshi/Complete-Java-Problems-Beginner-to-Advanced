@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Exercises by Pawan Joshi - Fundamental to Advanced</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprehensive Java programming exercises and tutorials by Pawan Joshi. Updated daily with problems ranging from fundamental to advanced topics. Learn Java with hands-on code examples.">
+    <meta name="keywords" content="Java programming, Java exercises, Java tutorial, Pawan Joshi, Java code examples, learn Java, Java fundamental, Java advanced, programming exercises">
+    <meta name="author" content="Pawan Joshi">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Java Programming Exercises by Pawan Joshi">
+    <meta property="og:description" content="Comprehensive Java programming exercises updated daily. From fundamental to advanced topics.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Java Programming Exercises by Pawan Joshi">
+    <meta name="twitter:description" content="Daily updated Java exercises from fundamental to advanced topics.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        /* Glassmorphism Container */
+        .container {
+            max-width: 1400px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 
+                        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 60px 30px 50px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 12px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            color: #6e6e73;
+            font-weight: 400;
+        }
+        
+        /* Search Bar */
+        .search-container {
+            padding: 25px 30px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        
+        .search-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #86868b;
+            font-size: 18px;
+            pointer-events: none;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 50px;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            color: #1d1d1f;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 4px 16px rgba(0, 122, 255, 0.2);
+            background: rgba(255, 255, 255, 1);
+        }
+        
+        .search-input::placeholder {
+            color: #86868b;
+        }
+        
+        /* Navigation */
+        .nav {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 15px;
+            font-weight: 500;
+            color: #1d1d1f;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .nav-btn:hover {
+            background: #007aff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.3);
+        }
+        
+        .nav-btn.active {
+            background: #007aff;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+        }
+        
+        /* Content */
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .program-section {
+            display: none;
+            animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .program-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Program Header */
+        .program-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .program-title {
+            font-size: 2.2em;
+            color: #1d1d1f;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .program-number {
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+        
+        /* Description Card */
+        .description {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 24px 28px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+        
+        .description h3 {
+            color: #007aff;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .description p {
+            color: #1d1d1f;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        
+        .description code {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #007aff;
+        }
+        
+        /* Code Container */
+        .code-container {
+            position: relative;
+            margin-top: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .code-header {
+            background: rgba(28, 28, 30, 0.95);
+            backdrop-filter: blur(20px);
+            color: #f5f5f7;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .code-header .filename {
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: #f5f5f7;
+        }
+        
+        .copy-btn {
+            background: rgba(0, 122, 255, 0.9);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+        }
+        
+        .copy-btn:hover {
+            background: #007aff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+        }
+        
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .copy-btn.copied {
+            background: #34c759;
+        }
+        
+        pre {
+            margin: 0;
+            overflow-x: auto;
+            background: rgba(28, 28, 30, 0.98) !important;
+        }
+        
+        pre code {
+            display: block;
+            padding: 24px;
+            font-size: 14px;
+            line-height: 1.6;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+        }
+        
+        /* Home Section */
+        .home-section {
+            text-align: center;
+            padding: 40px 20px 60px;
+        }
+        
+        .home-section h2 {
+            font-size: 2.5em;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .home-section > p {
+            font-size: 1.2em;
+            color: #6e6e73;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        
+        /* Program Grid */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 50px;
+        }
+        
+        .program-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 32px 28px;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007aff 0%, #5856d6 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .program-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(0, 122, 255, 0.15);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .card-number {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            color: white;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            font-size: 0.9em;
+        }
+        
+        .program-card h3 {
+            color: #1d1d1f;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+        
+        .program-card p {
+            color: #6e6e73;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(28, 28, 30, 0.95);
+            backdrop-filter: blur(20px);
+            color: #f5f5f7;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer p {
+            margin: 8px 0;
+            font-size: 0.95em;
+            color: #a1a1a6;
+        }
+        
+        footer a {
+            color: #007aff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #0051d5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header p {
+                font-size: 1em;
+            }
+            
+            .program-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .program-title {
+                font-size: 1.6em;
+            }
+            
+            .nav {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .search-container {
+                padding: 20px 15px;
+            }
+            
+            .content {
+                padding: 25px 15px;
+            }
+            
+            .program-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            pre code {
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 20px 35px;
+            }
+            
+            header h1 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Java Programming</h1>
+            <p>Updated Daily · Fundamental to Advanced</p>
+        </header>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search programs..."
+                    oninput="searchPrograms(this.value)"
+                    id="searchInput"
+                >
+            </div>
+        </div>
+        
+        <nav class="nav" id="navBar">
+            <button class="nav-btn active" onclick="showSection('home')" data-keywords="home overview all programs">
+                <span>Overview</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('factorial')" data-keywords="factorial command line arguments loop">
+                <span>01 · Factorial</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('reverse')" data-keywords="reverse number digits method">
+                <span>02 · Reverse</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('swap')" data-keywords="swap numbers variable exchange">
+                <span>03 · Swap</span>
+            </button>
+            <button class="nav-btn" onclick="showSection('student')" data-keywords="student information oop class object">
+                <span>04 · Student</span>
+            </button>
+        </nav>
+        
+        <div class="content">
+            <!-- Home Section -->
+            <div id="home" class="program-section active">
+                <div class="home-section">
+                    <h2>Java Fundamentals</h2>
+                    <p>
+                        Explore Java programming concepts through hands-on exercises, updated daily.
+                        From fundamental basics to advanced topics—each program demonstrates essential techniques.
+                    </p>
+                    
+                    <div class="program-grid">
+                        <div class="program-card" onclick="showSection('factorial')" data-search="factorial command line arguments loop">
+                            <div class="card-number">01</div>
+                            <h3>Factorial</h3>
+                            <p>Calculate factorial of a number using command-line arguments and iterative loops.</p>
+                        </div>
+                        
+                        <div class="program-card" onclick="showSection('reverse')" data-search="reverse number digits method">
+                            <div class="card-number">02</div>
+                            <h3>Reverse Number</h3>
+                            <p>Reverse integer digits using method-based approach and modulo operations.</p>
+                        </div>
+                        
+                        <div class="program-card" onclick="showSection('swap')" data-search="swap numbers variable exchange">
+                            <div class="card-number">03</div>
+                            <h3>Swap Numbers</h3>
+                            <p>Exchange two integers using temporary variable and method parameters.</p>
+                        </div>
+                        
+                        <div class="program-card" onclick="showSection('student')" data-search="student information oop class object">
+                            <div class="card-number">04</div>
+                            <h3>Student Info</h3>
+                            <p>Manage student data with object-oriented principles and encapsulation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Factorial Program -->
+            <div id="factorial" class="program-section">
+                <div class="program-header">
+                    <h2 class="program-title">Factorial</h2>
+                    <span class="program-number">01</span>
+                </div>
+                
+                <div class="description">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+                        </svg>
+                        Description
+                    </h3>
+                    <p>Calculates the factorial of a number passed as a command-line argument. Demonstrates command-line argument parsing, integer conversion, and iterative loop control.</p>
+                    <p><strong>Usage:</strong> <code>java Factorial 5</code></p>
+                </div>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="filename">01_Factorial.java</span>
+                        <button class="copy-btn" onclick="copyCode(event, 'factorial-code')">Copy</button>
+                    </div>
+                    <pre><code id="factorial-code" class="language-java">// factorial using command line argument
+
+public class Factorial {
+    public static void main(String args[]){
+        int n = Integer.parseInt(args[0]);
+        int fact=1;
+        System.out.println(" FACTORIAL OF A NUMBER ");
+        for(int i=1; i<=n; i++){
+            fact *= i; 
+        }
+        System.out.println("The Factorial is:"+fact);
+    }
+}</code></pre>
+                </div>
+            </div>
+            
+            <!-- Reverse Program -->
+            <div id="reverse" class="program-section">
+                <div class="program-header">
+                    <h2 class="program-title">Reverse Number</h2>
+                    <span class="program-number">02</span>
+                </div>
+                
+                <div class="description">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+                        </svg>
+                        Description
+                    </h3>
+                    <p>Reverses the digits of an integer entered by the user. Uses a method-based approach to demonstrate OOP principles and the modulo operator for digit extraction.</p>
+                    <p><strong>Usage:</strong> <code>java Reverse</code> (then enter a number)</p>
+                </div>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="filename">02_Reverse.java</span>
+                        <button class="copy-btn" onclick="copyCode(event, 'reverse-code')">Copy</button>
+                    </div>
+                    <pre><code id="reverse-code" class="language-java">import java.util.Scanner;
+
+public class Reverse {
+    int rev(int num){
+        int sum=0;
+        while(num!=0){
+            int r=num%10;
+            sum = sum*10+r;
+            num = num/10;
+        }
+        System.out.println(sum);
+        return sum;
+    }
+    public static void main(String[] args) {
+        int num;
+        System.out.println("REVERSE OF A NUMBER USING FACTORIAL");
+        System.out.println("\nEnter the number");
+        try (Scanner input = new Scanner(System.in)) {
+            num = input.nextInt();
+        }
+        Reverse obj=new Reverse();
+        int res=obj.rev(num);
+        System.out.println("The reverse of a number is:" + res );
+    }
+}</code></pre>
+                </div>
+            </div>
+            
+            <!-- Swap Program -->
+            <div id="swap" class="program-section">
+                <div class="program-header">
+                    <h2 class="program-title">Swap Numbers</h2>
+                    <span class="program-number">03</span>
+                </div>
+                
+                <div class="description">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+                        </svg>
+                        Description
+                    </h3>
+                    <p>Swaps two integers using a temporary variable. Demonstrates method creation, object instantiation, and parameter passing in Java.</p>
+                    <p><strong>Usage:</strong> <code>java Swap</code> (then enter two numbers)</p>
+                </div>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="filename">03_Swap.java</span>
+                        <button class="copy-btn" onclick="copyCode(event, 'swap-code')">Copy</button>
+                    </div>
+                    <pre><code id="swap-code" class="language-java">import java.util.Scanner;
+
+public class Swap{
+
+     void swap(int a,int b){
+        int c;
+        c=a;
+        a=b;
+        b=c;
+        
+        System.out.println(a);
+        System.out.println(b);
+
+    }
+    public static void main(String args[]){
+        Scanner input = new Scanner(System.in);
+        int a=input.nextInt();
+        int b=input.nextInt();
+        System.out.println("Enter the number a and b");
+        Swap obj = new Swap();
+        obj.swap(a, b);
+ // why can we call static method without method creation 
+    }
+}</code></pre>
+                </div>
+            </div>
+            
+            <!-- Student Program -->
+            <div id="student" class="program-section">
+                <div class="program-header">
+                    <h2 class="program-title">Student Info</h2>
+                    <span class="program-number">04</span>
+                </div>
+                
+                <div class="description">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+                        </svg>
+                        Description
+                    </h3>
+                    <p>Demonstrates object-oriented programming with a Student class containing attributes (ID, name, address, marks) and methods for data management. Showcases encapsulation and class design principles.</p>
+                    <p><strong>Usage:</strong> <code>java Student</code> (then enter ID, name, address, and marks)</p>
+                </div>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="filename">04_Student.java</span>
+                        <button class="copy-btn" onclick="copyCode(event, 'student-code')">Copy</button>
+                    </div>
+                    <pre><code id="student-code" class="language-java">import java.util.*;
+
+public class Student {
+    int ID;
+    String name;
+    String address;
+    int marks;
+
+    void setData(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter ID, Name, address, marks");
+        ID= input.nextInt();
+        name= input.next();
+        address= input.next();
+        marks= input.nextInt();
+    }
+
+    void getData(){
+        System.out.println("Name: "+ name );
+        System.out.println("ID: "+ ID);
+        System.out.println("address" + address);
+        System.out.println("Marks: "+marks);
+    }
+    public static void main(String[] args) {
+        System.out.println("Hello, Student!");
+        Student std = new Student();
+        std.setData();   
+        std.getData();     
+
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Java Programming Exercises · 2026</p>
+        <p>Built by <strong>Pawan Joshi</strong> · Updated Daily</p>
+    </footer>
+    
+    <script>
+        // Initialize syntax highlighting
+        hljs.highlightAll();
+        
+        // Section navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.program-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Highlight active button
+            event.target.classList.add('active');
+            
+            // Clear search
+            document.getElementById('searchInput').value = '';
+            
+            // Re-highlight code blocks
+            setTimeout(() => {
+                hljs.highlightAll();
+            }, 50);
+        }
+        
+        // Search functionality
+        function searchPrograms(query) {
+            const searchTerm = query.toLowerCase().trim();
+            const cards = document.querySelectorAll('.program-card');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            if (!searchTerm) {
+                // Show all if search is empty
+                cards.forEach(card => {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                });
+                navButtons.forEach(btn => {
+                    btn.style.display = 'inline-block';
+                });
+                return;
+            }
+            
+            // Filter cards
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search') || '';
+                const text = (card.textContent + ' ' + searchData).toLowerCase();
+                
+                if (text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                    card.style.animation = 'fadeIn 0.4s ease';
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            // Filter nav buttons (except Overview)
+            navButtons.forEach(btn => {
+                if (btn.textContent.includes('Overview')) return;
+                
+                const keywords = btn.getAttribute('data-keywords') || '';
+                const text = (btn.textContent + ' ' + keywords).toLowerCase();
+                
+                if (text.includes(searchTerm)) {
+                    btn.style.display = 'inline-block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            });
+        }
+        
+        // Copy code functionality
+        function copyCode(event, codeId) {
+            const codeElement = document.getElementById(codeId);
+            const text = codeElement.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy code. Please select and copy manually.');
+            });
+        }
+        
+        // Smooth scroll behavior
+        document.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.style.scrollBehavior = 'smooth';
+        });
+    </script>
+</body>
+</html>
