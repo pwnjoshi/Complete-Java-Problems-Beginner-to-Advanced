@@ -29,6 +29,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
     <style>
+        :root {
+            color-scheme: light dark;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -507,6 +510,94 @@
             
             header h1 {
                 font-size: 1.6em;
+            }
+        }
+
+        /* Dark mode: follows system preference */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e6e8ec;
+                background: radial-gradient(circle at 20% 20%, rgba(94, 92, 230, 0.25), transparent 30%),
+                            radial-gradient(circle at 80% 0%, rgba(52, 199, 89, 0.25), transparent 25%),
+                            #0b0d11;
+            }
+            .container {
+                background: rgba(18, 20, 24, 0.8);
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+            }
+            header {
+                background: linear-gradient(135deg, #141824 0%, #0c0f15 100%);
+            }
+            header p {
+                color: #c9ccd6;
+            }
+            header h1 {
+                background: linear-gradient(135deg, #4da3ff 0%, #7b7bff 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .search-container {
+                background: rgba(18, 20, 24, 0.75);
+            }
+            .search-input {
+                background: rgba(34, 36, 42, 0.9);
+                color: #e6e8ec;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+            }
+            .search-input::placeholder {
+                color: #8f95a3;
+            }
+            .search-icon {
+                color: #a8b2c1;
+            }
+            .nav {
+                background: rgba(22, 24, 28, 0.7);
+                border-color: rgba(255, 255, 255, 0.05);
+            }
+            .nav-btn {
+                background: rgba(34, 36, 42, 0.92);
+                color: #e6e8ec;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+            }
+            .nav-btn:hover, .nav-btn.active {
+                background: linear-gradient(135deg, #0a84ff 0%, #5e5ce6 100%);
+                color: white;
+            }
+            .home-section h2, .program-title {
+                color: #f5f7fb;
+            }
+            .home-section > p, .description p {
+                color: #c9ccd6;
+            }
+            .description {
+                background: rgba(22, 24, 28, 0.92);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            }
+            .program-card {
+                background: rgba(24, 26, 32, 0.9);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                color: #e6e8ec;
+            }
+            .program-card p {
+                color: #c9ccd6;
+            }
+            .program-card:hover {
+                background: rgba(34, 36, 42, 0.95);
+                box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+            }
+            .code-header {
+                background: rgba(12, 12, 14, 0.95);
+            }
+            pre {
+                background: rgba(12, 12, 14, 0.98) !important;
+            }
+            footer {
+                background: rgba(12, 12, 14, 0.95);
+                color: #c9ccd6;
+            }
+            footer p {
+                color: #8f95a3;
             }
         }
     </style>
