@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Swap{
+public class Swap{
 
      void swap(int a,int b){
         int c;

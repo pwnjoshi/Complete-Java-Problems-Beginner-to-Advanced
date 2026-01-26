@@ -31,10 +31,10 @@ This is a curated collection of Java programming exercises designed to help lear
 
 | # | Program | Difficulty | Key Concepts |
 |:---:|---------|:----------:|--------------|
-| 01 | [Factorial Calculator](01_Factorial.java) | ⭐ Beginner | Command-line arguments, loops, integer parsing |
-| 02 | [Reverse Number](02_Reverse.java) | ⭐ Beginner | Methods, Scanner input, while loops, modulo |
-| 03 | [Swap Numbers](03_Swap.java) | ⭐ Beginner | Object instantiation, method parameters |
-| 04 | [Student Information System](04_Student.java) | ⭐⭐ Intermediate | OOP, encapsulation, class design |
+| 01 | [Factorial Calculator](Factorial.java) | ⭐ Beginner | Command-line arguments, loops, integer parsing |
+| 02 | [Reverse Number](Reverse.java) | ⭐ Beginner | Methods, Scanner input, while loops, modulo |
+| 03 | [Swap Numbers](Swap.java) | ⭐ Beginner | Object instantiation, method parameters |
+| 04 | [Student Information System](Student.java) | ⭐⭐ Intermediate | OOP, encapsulation, class design |
 
 > **📌 Note:** More programs are added daily! This collection will expand to cover data structures, algorithms, file I/O, collections, multithreading, design patterns, and advanced Java topics.
 
@@ -73,28 +73,28 @@ Features:
 
    **Factorial** (command-line argument)
    ```bash
-   javac 01_Factorial.java
+   javac Factorial.java
    java Factorial 5
    ```
    Output: `The Factorial is:120`
 
    **Reverse Number** (interactive)
    ```bash
-   javac 02_Reverse.java
+   javac Reverse.java
    java Reverse
    ```
    Enter a number when prompted.
 
    **Swap Numbers** (interactive)
    ```bash
-   javac 03_Swap.java
+   javac Swap.java
    java Swap
    ```
    Enter two integers when prompted.
 
    **Student Info** (interactive)
    ```bash
-   javac 04_Student.java
+   javac Student.java
    java Student
    ```
    Enter: ID, Name, Address, Marks
@@ -102,15 +102,15 @@ Features:
 ## 📂 Repository Structure
 
 ```
-Complete-Java-Problems-Beginner-to-Advanced-/
+Complete-Java-Problems-Beginner-to-Advanced/
 │
 ├── 📄 index.html              # Interactive web viewer
 ├── 📄 README.md               # Documentation
 │
-├── ☕ 01_Factorial.java       # Factorial calculator
-├── ☕ 02_Reverse.java         # Reverse integer digits
-├── ☕ 03_Swap.java            # Swap two numbers
-├── ☕ 04_Student.java         # Student management
+├── ☕ Factorial.java          # Factorial calculator
+├── ☕ Reverse.java            # Reverse integer digits
+├── ☕ Swap.java               # Swap two numbers
+├── ☕ Student.java            # Student management
 │
 └── ... (more programs added daily)
 ```
@@ -145,7 +145,7 @@ Host your own version:
 2. Navigate to **Settings** → **Pages**
 3. Select **main** branch as source
 4. Your site will be live at:  
-   `https://yourusername.github.io/Complete-Java-Problems-Beginner-to-Advanced-/`
+   `https://yourusername.github.io/Complete-Java-Problems-Beginner-to-Advanced/`
 
 ## 🤝 Contributing
 
@@ -155,13 +155,13 @@ Contributions are welcome! If you have:
 - 📝 Documentation improvements
 - 💡 Feature ideas
 
-Please open an [issue](https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-/issues) or submit a pull request.
+Please open an [issue](https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced/issues) or submit a pull request.
 
 ## 📊 Repository Stats
 
-![GitHub stars](https://img.shields.io/github/stars/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-?style=social)
-![GitHub forks](https://img.shields.io/github/forks/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-?style=social)
+![GitHub stars](https://img.shields.io/github/stars/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced?style=social)
+![GitHub forks](https://img.shields.io/github/forks/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced?style=social)
 
 ## 💬 Feedback
 
@@ -169,7 +169,7 @@ Your feedback helps improve this repository! If you find these exercises helpful
 - ⭐ Star the repository
 - 🍴 Fork it for your own learning
 - 📢 Share with fellow Java learners
-- 💬 Leave feedback in [issues](https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced-/issues)
+- 💬 Leave feedback in [issues](https://github.com/pwnjoshi/Complete-Java-Problems-Beginner-to-Advanced/issues)
 
 ## 👨‍💻 About the Author
 

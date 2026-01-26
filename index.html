@@ -579,12 +579,22 @@
                 border: 1px solid rgba(255, 255, 255, 0.05);
                 color: #e6e8ec;
             }
+            .program-card h3 {
+                color: #f5f7fb;
+            }
             .program-card p {
                 color: #c9ccd6;
             }
             .program-card:hover {
                 background: rgba(34, 36, 42, 0.95);
                 box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+            }
+            .description h3 {
+                color: #4da3ff;
+            }
+            .description code {
+                background: rgba(255, 255, 255, 0.08);
+                color: #4da3ff;
             }
             .code-header {
                 background: rgba(12, 12, 14, 0.95);
@@ -630,17 +640,17 @@
             <button class="nav-btn active" onclick="showSection('home')" data-keywords="home overview all programs">
                 <span>Overview</span>
             </button>
-            <button class="nav-btn" onclick="showSection('factorial')" data-keywords="factorial command line arguments loop">
-                <span>01 · Factorial</span>
+            <button class="nav-btn" onclick="showSection('factorial')" data-keywords="factorial factorial.java command line arguments loop">
+                <span>Factorial.java</span>
             </button>
-            <button class="nav-btn" onclick="showSection('reverse')" data-keywords="reverse number digits method">
-                <span>02 · Reverse</span>
+            <button class="nav-btn" onclick="showSection('reverse')" data-keywords="reverse reverse.java number digits method">
+                <span>Reverse.java</span>
             </button>
-            <button class="nav-btn" onclick="showSection('swap')" data-keywords="swap numbers variable exchange">
-                <span>03 · Swap</span>
+            <button class="nav-btn" onclick="showSection('swap')" data-keywords="swap swap.java numbers variable exchange">
+                <span>Swap.java</span>
             </button>
-            <button class="nav-btn" onclick="showSection('student')" data-keywords="student information oop class object">
-                <span>04 · Student</span>
+            <button class="nav-btn" onclick="showSection('student')" data-keywords="student student.java information oop class object">
+                <span>Student.java</span>
             </button>
         </nav>
         
@@ -655,25 +665,25 @@
                     </p>
                     
                     <div class="program-grid">
-                        <div class="program-card" onclick="showSection('factorial')" data-search="factorial command line arguments loop">
+                        <div class="program-card" onclick="showSection('factorial')" data-search="factorial factorial.java command line arguments loop">
                             <div class="card-number">01</div>
                             <h3>Factorial</h3>
                             <p>Calculate factorial of a number using command-line arguments and iterative loops.</p>
                         </div>
                         
-                        <div class="program-card" onclick="showSection('reverse')" data-search="reverse number digits method">
+                        <div class="program-card" onclick="showSection('reverse')" data-search="reverse reverse.java number digits method">
                             <div class="card-number">02</div>
                             <h3>Reverse Number</h3>
                             <p>Reverse integer digits using method-based approach and modulo operations.</p>
                         </div>
                         
-                        <div class="program-card" onclick="showSection('swap')" data-search="swap numbers variable exchange">
+                        <div class="program-card" onclick="showSection('swap')" data-search="swap swap.java numbers variable exchange">
                             <div class="card-number">03</div>
                             <h3>Swap Numbers</h3>
                             <p>Exchange two integers using temporary variable and method parameters.</p>
                         </div>
                         
-                        <div class="program-card" onclick="showSection('student')" data-search="student information oop class object">
+                        <div class="program-card" onclick="showSection('student')" data-search="student student.java information oop class object">
                             <div class="card-number">04</div>
                             <h3>Student Info</h3>
                             <p>Manage student data with object-oriented principles and encapsulation.</p>
@@ -686,7 +696,7 @@
             <div id="factorial" class="program-section">
                 <div class="program-header">
                     <h2 class="program-title">Factorial</h2>
-                    <span class="program-number">01</span>
+                    <span class="program-number">Factorial.java</span>
                 </div>
                 
                 <div class="description">
@@ -702,7 +712,7 @@
                 
                 <div class="code-container">
                     <div class="code-header">
-                        <span class="filename">01_Factorial.java</span>
+                        <span class="filename">Factorial.java</span>
                         <button class="copy-btn" onclick="copyCode(event, 'factorial-code')">Copy</button>
                     </div>
                     <pre><code id="factorial-code" class="language-java">// factorial using command line argument
@@ -725,7 +735,7 @@ public class Factorial {
             <div id="reverse" class="program-section">
                 <div class="program-header">
                     <h2 class="program-title">Reverse Number</h2>
-                    <span class="program-number">02</span>
+                    <span class="program-number">Reverse.java</span>
                 </div>
                 
                 <div class="description">
@@ -741,7 +751,7 @@ public class Factorial {
                 
                 <div class="code-container">
                     <div class="code-header">
-                        <span class="filename">02_Reverse.java</span>
+                        <span class="filename">Reverse.java</span>
                         <button class="copy-btn" onclick="copyCode(event, 'reverse-code')">Copy</button>
                     </div>
                     <pre><code id="reverse-code" class="language-java">import java.util.Scanner;
@@ -776,7 +786,7 @@ public class Reverse {
             <div id="swap" class="program-section">
                 <div class="program-header">
                     <h2 class="program-title">Swap Numbers</h2>
-                    <span class="program-number">03</span>
+                    <span class="program-number">Swap.java</span>
                 </div>
                 
                 <div class="description">
@@ -792,7 +802,7 @@ public class Reverse {
                 
                 <div class="code-container">
                     <div class="code-header">
-                        <span class="filename">03_Swap.java</span>
+                        <span class="filename">Swap.java</span>
                         <button class="copy-btn" onclick="copyCode(event, 'swap-code')">Copy</button>
                     </div>
                     <pre><code id="swap-code" class="language-java">import java.util.Scanner;
@@ -826,7 +836,7 @@ public class Swap{
             <div id="student" class="program-section">
                 <div class="program-header">
                     <h2 class="program-title">Student Info</h2>
-                    <span class="program-number">04</span>
+                    <span class="program-number">Student.java</span>
                 </div>
                 
                 <div class="description">
@@ -842,7 +852,7 @@ public class Swap{
                 
                 <div class="code-container">
                     <div class="code-header">
-                        <span class="filename">04_Student.java</span>
+                        <span class="filename">Student.java</span>
                         <button class="copy-btn" onclick="copyCode(event, 'student-code')">Copy</button>
                     </div>
                     <pre><code id="student-code" class="language-java">import java.util.*;

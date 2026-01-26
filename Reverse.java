@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Reverse {
+public class Reverse {
     int rev(int num){
         int sum=0;
         while(num!=0){

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Student {
+public class Student {
     int ID;
     String name;
     String address;
