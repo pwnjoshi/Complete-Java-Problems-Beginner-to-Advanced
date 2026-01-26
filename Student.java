@@ -18,7 +18,7 @@ public class Student {
     void getData(){
         System.out.println("Name: "+ name );
         System.out.println("ID: "+ ID);
-        System.out.println("address" + address);
+        System.out.println("address: " + address);
         System.out.println("Marks: "+marks);
     }
     public static void main(String[] args) {

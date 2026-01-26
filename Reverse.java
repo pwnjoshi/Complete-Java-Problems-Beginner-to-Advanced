@@ -8,12 +8,11 @@ public class Reverse {
             sum = sum*10+r;
             num = num/10;
         }
-        System.out.println(sum);
         return sum;
     }
     public static void main(String[] args) {
         int num;
-        System.out.println("REVERSE OF A NUMBER USING FACTORIAL");
+        System.out.println("REVERSE OF A NUMBER");
         System.out.println("\nEnter the number");
         try (Scanner input = new Scanner(System.in)) {
             num = input.nextInt();
