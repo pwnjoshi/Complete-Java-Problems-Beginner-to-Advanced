@@ -32,7 +32,7 @@ public class Palindrome {
             word = word.replaceAll("[^a-zA-Z]", "");
             
             if(word.isEmpty()){
-                continue;  // Skip to next word
+                continue;  
             }
             
             String lowerWord = word.toLowerCase();
